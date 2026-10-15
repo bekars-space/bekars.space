@@ -1,11 +1,27 @@
 ---
-import Welcome from '../components/Welcome.astro';
+import logo from '../assets/bekars-space.svg';
 import Layout from '../layouts/Layout.astro';
-
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
 ---
 
 <Layout>
-	<Welcome />
+	<main>
+		<img src={logo.src} alt="Bekars Space" />
+	</main>
 </Layout>
+
+<style>
+	main {
+		display: grid;
+		place-items: center;
+		min-height: 100vh;
+		min-height: 100dvh;
+	}
+
+	img {
+		display: block;
+		width: min(24rem, 76vw, 76vh);
+		width: min(24rem, 76vw, 76dvh);
+		height: auto;
+		aspect-ratio: 126.45475 / 20;
+	}
+</style>
